@@ -1,0 +1,106 @@
+:root {
+  --bg-dark: #242424;
+  --bg-panel: #303030;
+  --border-color: #4d4d4d;
+  --text-primary: #e9e9e9;
+  --text-secondary: #a9a9a9;
+  --accent-blue: #e95420;
+  --accent-blue-hover: #f06a39;
+}
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+}
+/* Animation für das Einblenden von Elementen */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Stile für den Zeitstrahl */
+.timeline {
+  position: relative;
+  padding-left: 2.5rem; /* Platz für die Linie und die Punkte */
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  bottom: 10px;
+  width: 3px;
+  background-color: var(--bg-panel);
+  border-radius: 3px;
+}
+.timeline-item {
+  position: relative;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -28px;
+  top: 1.1rem;
+  width: 13px;
+  height: 13px;
+  background-color: #5a5a5a;
+  border-radius: 9999px;
+  border: 3px solid var(--bg-dark);
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+.timeline-item.active::before {
+  background-color: var(--accent-blue);
+}
+.timeline-item:hover::before,
+.timeline-item.active::before {
+  background-color: var(--accent-blue-hover); /* sky-500 */
+}
+.active-project {
+  border-color: var(--accent-blue) !important;
+  background-color: rgba(53, 132, 228, 0.1) !important;
+  transform: scale(1.02);
+}
+#skills-table tbody tr {
+  transition: background-color 0.2s ease-in-out;
+}
+#skills-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.disabled-project {
+  opacity: 0.4;
+  cursor: not-allowed;
+  border-color: var(--border-color-disabled, #ccc);
+  pointer-events: none;
+}
+
+/* Existing styles remain the same */
+.hidden-project {
+  display: none;
+}
+
+.animated-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.reveal-animation {
+  opacity: 1;
+  transform: translateY(0);
+}
+.toggle-button-container {
+    text-align: center;
+    margin-top: 6px; /* Adjust as needed */
+    overflow: hidden; /* Important for height transition */
+    transition: height 0.5s ease-out; /* Smooth height transition */
+    /* Set an initial height, or let it be determined by content */
+}
+
+
