@@ -13,24 +13,36 @@ body {
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
 }
-.logo-wrapper {
-  display: flex;
-  align-items: center; /* vertikal zentrieren */
-  gap: 8px; /* Abstand zwischen Bild und Text */
-}
-.logo-wrapper img {
-  width: 120px; /* oder was du willst */
-  transition: transform 0.3s ease;
-}
-.logo-wrapper:hover img {
-  transform: scale(1.05);
-}
-.logo-wrapper a {
-  text-decoration: none;
-  color: var(--text-primary);
-  font-size: 1.25rem; /* entspricht text-xl */
-  font-weight: bold;
-}
+ .logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-wrapper img {
+    width: 120px;
+    transition: transform 0.3s ease;
+    content: url("swisscom-logo.png"); /* Standard-Logo */
+  }
+
+  .logo-wrapper:hover img {
+    transform: scale(1.05);
+  }
+
+  .logo-wrapper a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 1.25rem; /* text-xl */
+    font-weight: bold;
+  }
+
+  /* 📱 Wenn Bildschirm schmaler als 768px ist (Handy/Tablet) */
+  @media (max-width: 768px) {
+    .logo-wrapper img {
+      content: url("swisscom-logo-mobile.png"); /* hier dein Mobile-Logo */
+      width: 35px; /* kleineres Logo für Handy */
+    }
+  }
 /* Animation für das Einblenden von Elementen */
 .reveal {
   opacity: 0;
