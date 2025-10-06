@@ -13,6 +13,24 @@ body {
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
 }
+.logo-wrapper {
+  display: flex;
+  align-items: center; /* vertikal zentrieren */
+  gap: 8px; /* Abstand zwischen Bild und Text */
+}
+.logo-wrapper img {
+  width: 120px; /* oder was du willst */
+  transition: transform 0.3s ease;
+}
+.logo-wrapper:hover img {
+  transform: scale(1.05);
+}
+.logo-wrapper a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 1.25rem; /* entspricht text-xl */
+  font-weight: bold;
+}
 /* Animation für das Einblenden von Elementen */
 .reveal {
   opacity: 0;
