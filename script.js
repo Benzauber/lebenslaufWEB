@@ -52,16 +52,13 @@ const projects = [
 ];
 
 const strengths = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "Python",
-  "Flask",
-  "Bash",
-  "Markdown",
   "Ubuntu",
-  "GutHub",
-  "VS Code",
+  "RHEL",
+  "Ansible",
+  "Bash",
+  "Git",
+  "Vim",
+  "VsCode"
 ];
 function renderInternalProjects() {
   const list = document.getElementById("internal-projects-list");
