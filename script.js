@@ -4,7 +4,7 @@ const internalProjects = [
     id: 1,
     year: "H2 2025",
     title: "Linux Server Engineering",
-    text: "Betreuung und Absicherung von Linux-Servern im ESC-Umfeld. Behebung von Störungen und Optimierung von Abläufen. Implementierung von Automatisierungen zur Effizienzsteigerung.",
+    text: "Ich habe meine ersten Ansible- und RHEL-Kenntnisse aufgebaut. Dabei musste ich Ansible-Playbooks verstehen und erstellen. Wenn etwas nicht lief, habe ich fehlerhafte Automatisierungen behoben. Alles habe ich Schritt für Schritt in GitLab festgehalten, damit es nachvollziehbar bleibt."
   },
 
 ];
